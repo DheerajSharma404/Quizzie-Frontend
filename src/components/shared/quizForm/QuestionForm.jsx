@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useModal } from "../../../contexts/ModalContext";
@@ -19,7 +20,6 @@ const QuestionForm = ({ action, quizId, quizNameAndType }) => {
   const [quizData] = React.useState(
     Quizzes?.find((quiz) => quiz?._id === quizId)
   );
-  console.log("quizData", quizData);
   const [formErrors, setFormErrors] = React.useState({});
 
   const [formData, setFormData] = React.useState({
@@ -44,15 +44,15 @@ const QuestionForm = ({ action, quizId, quizNameAndType }) => {
     ],
     impressionCount: quizData?.impressionCount || 0,
   });
-  const [currentQuestion, setCurrentQuestion] = React.useState(0);
+  const [currentQuestion, setCurrentQuestion] = React.useState(
+    formData.questions.length - 1 || 0
+  );
   const [correctAnswer, setCorrectAnswer] = React.useState(
     quizData?.questions[currentQuestion]?.correctAnswer || ""
   );
   const [timer, setTimer] = React.useState(
     quizData?.questions[currentQuestion]?.timer || 0
   );
-
-  console.log("formData", formData);
 
   const handleCurrentQuestion = (index) => {
     if (action === "edit") {
@@ -62,9 +62,9 @@ const QuestionForm = ({ action, quizId, quizNameAndType }) => {
       setTimer(selectedQuestion?.timer || 0);
     } else {
       const selectedQuestion = formData?.questions[index];
-      setCurrentQuestion(index);
       setCorrectAnswer(selectedQuestion?.correctAnswer || "");
       setTimer(selectedQuestion?.timer || 0);
+      setCurrentQuestion(index);
     }
   };
 
@@ -103,7 +103,6 @@ const QuestionForm = ({ action, quizId, quizNameAndType }) => {
     setCorrectAnswer("");
     setTimer(0);
   };
-
   const handleRemoveQuestion = (id) => {
     if (action === "edit") {
       handleCurrentQuestion(id === 0 ? 0 : id - 1);
@@ -273,7 +272,7 @@ const QuestionForm = ({ action, quizId, quizNameAndType }) => {
                   <button
                     type='button'
                     className={styles.removeQuestionIcon}
-                    onClick={() => handleRemoveQuestion(item?.id)}
+                    onClick={() => handleRemoveQuestion(index)}
                   >
                     <img src='/assets/icons/cross.svg' alt='Remove icon' />
                   </button>
