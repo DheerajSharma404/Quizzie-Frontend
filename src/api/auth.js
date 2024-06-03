@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "http://localhost:3000/api/v1/user";
+const baseURL = "https://quizzie-backend-s2p6.onrender.com/api/v1/user";
 
 export const signUpUser = async ({
   name,

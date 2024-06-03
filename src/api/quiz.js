@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:3000/api/v1/quizzes";
+const baseURL = "https://quizzie-backend-s2p6.onrender.com/api/v1/quizzes";
 
 export const createQuiz = async (data) => {
   try {
