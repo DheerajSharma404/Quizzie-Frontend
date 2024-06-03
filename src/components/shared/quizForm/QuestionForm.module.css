@@ -1,0 +1,395 @@
+/* Question From Styles */
+.questionFormWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: var(--radius-10);
+  box-shadow: var(--box-shadow-25);
+  min-width: 52.8rem;
+  min-height: 41.6rem;
+}
+.questionForm {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  width: 100%;
+  height: 36.3259rem;
+  padding-inline: 2rem;
+
+}
+.questionNumberWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 3.2rem;
+}
+.questionNumberAndAddBtnWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.questionNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-10);
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+  width: 3.625rem;
+  height: 3.625rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.removeQuestionIcon {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: var(--text-20);
+  color: var(--color-gray);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: -0.6rem;
+}
+.addQuestionIcon {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: var(--text-20);
+  color: var(--color-gray);
+  cursor: pointer;
+}
+
+.maxQuestionLable {
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-10);
+  margin-top: 2rem;
+  padding-inline: 3.2rem;
+}
+
+.question input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: var(--text-25);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+  border-radius: var(--radius-10);
+  padding: 0.8rem 1rem;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-25);
+}
+.question input::placeholder {
+  color: var(--color-gray);
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+}
+
+.optionsTypeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+  padding-inline: 4rem;
+  padding-block: 1.5rem;
+  white-space: nowrap;
+}
+.optionTypeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.optionType {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  padding-left: 2.5rem;
+}
+.optionType input {
+  appearance: none;
+  --webkit-appearance: none;
+  position: absolute;
+  left: 0;
+  margin-bottom: 3px;
+}
+
+.optionType input[type="radio"] {
+  width: 1.1875rem;
+  height: 1.1875rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-lightgray);
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+}
+
+.optionType input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.optionType input[type="radio"]:checked:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: var(--color-black);
+}
+
+/* Options and Timer Style */
+.optionsAndTimerWrapper {
+  display: flex;
+  align-items: start;
+  height: 24rem;
+}
+.optionsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  position: relative;
+}
+
+.option input[type="radio"] {
+  appearance: none;
+  --webkit-appearance: none;
+  position: absolute;
+  left: 0;
+  margin-bottom: 3px;
+}
+.option input[type="radio"] {
+  width: 1.1875rem;
+  height: 1.1875rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-lightgray);
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+}
+
+.option input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.option input[type="radio"]:checked:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: var(--color-green);
+}
+
+.option input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+  border-radius: var(--radius-10);
+  padding: 0.8rem;
+  margin-left: 3rem;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-25);
+  width: 15.99rem;
+}
+
+.option input[type="text"]::placeholder {
+  color: var(--color-gray);
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  text-transform: capitalize;
+}
+
+.option .optionTypeBasedTextWidth {
+  width: 11.34rem;
+}
+.correctOption {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.selectedTimer {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  box-shadow: var(--box-shadow-red);
+}
+.selectedOption {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.deleteOptionBtn {
+  background-color: transparent;
+  border: none;
+}
+.hideDeleteOptionBtn {
+  display: none;
+}
+
+.addOptionBtnWrapper {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding-left: 3rem;
+  width: 17.6rem;
+}
+.addOptionBtnWrapper button {
+  background-color: var(--color-white);
+  color: var(--color-gray);
+  border: none;
+  outline: none;
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-10);
+  padding: 0.8rem 0;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-25);
+  width: 100%;
+}
+
+.timersWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  padding-right: 3rem;
+  padding-top: 6rem;
+}
+
+.timerLabel {
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+  padding-right: 2.2rem;
+  padding-bottom: 0;
+}
+.timerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 5rem;
+  padding: 0.4rem;
+  border-radius: var(--radius-10);
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-25);
+  font-size: var(--text-15);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+}
+
+.EditCancelAndContinueBtnWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  align-items: center;
+  padding: 3rem;
+
+  padding-bottom: 0;
+}
+
+.cancel {
+  flex: 1;
+  padding: 0.5rem 0;
+  border-radius: var(--radius-10);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: none;
+  box-shadow: var(--box-shadow-15);
+  font-size: var(--text-21);
+  font-weight: var(--font-weight-semibold);
+}
+
+.continue {
+  flex: 1;
+  padding: 0.5rem 0;
+  border-radius: var(--radius-10);
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border: none;
+  font-size: var(--text-21);
+  font-weight: var(--font-weight-semibold);
+}
+.option input [type="text"] .correctOption {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.selectedTimer {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  box-shadow: var(--box-shadow-red);
+}
+.selectedOption {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.option input.correctOption {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.option input.correctOption::placeholder {
+  color: var(--color-white);
+}

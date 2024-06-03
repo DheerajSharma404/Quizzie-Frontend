@@ -1,0 +1,32 @@
+.statCard {
+  display: flex;
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+  width: 100%;
+  padding-inline: 2rem;
+  padding-block: .5rem;
+}
+
+.stat {
+  font-size: var(--text-60);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-darkgray);
+}
+.label {
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+  font-size: var(--text-30);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-darkgray);
+}
+
+.orange {
+  color: var(--color-orange);
+}
+.green {
+  color: var(--color-green);
+}
+
+.blue {
+  color: var(--color-blue);
+}

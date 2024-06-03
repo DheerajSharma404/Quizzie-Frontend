@@ -1,0 +1,63 @@
+.jomhuriaRegular100 {
+  font-family: "Jomhuria", serif;
+  font-size: var(--text-100);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-darkgray);
+}
+
+.authlayoutWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  height: 80%;
+  border-radius: var(--radius-15);
+  margin: 0 auto;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-30);
+}
+
+.logoWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 6rem;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+.buttonWrapper button {
+  padding: 0.4rem 4.8rem;
+  border-radius: var(--radius-5);
+  background-color: transparent;
+  color: var(--color-darkgray);
+  font-size: var(--text-20);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: var(--radius-10);
+}
+
+.selected {
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-50);
+  border: none;
+  border-radius: var(--radius-10);
+}
+
+.outletWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,69 @@
+.jomhuriaRegular70 {
+  font-family: "Jomhuria", serif;
+  font-size: var(--text-70);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-darkgray);
+}
+.sidebar {
+  display: flex;
+  width: 12.0625rem;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow-4);
+}
+
+.sidebarMenuWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-block: 1rem;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 0.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 93%;
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+.selectedMenuItem {
+  background-color: var(--color-white);
+  color: var(--color-darkgray);
+  box-shadow: var(--box-shadow-14);
+}
+
+.menuItem:hover {
+  background-color: var(--color-white);
+  color: var(--color-darkgray);
+  box-shadow: var(--box-shadow-14);
+}
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 1.5rem;
+  cursor: pointer;
+  width: 65%;
+  border-top: 1px solid var(--color-black);
+}
+.logoutBtn button {
+  background-color: var(--color-white);
+  color: var(--color-darkgray);
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  border: none;
+}

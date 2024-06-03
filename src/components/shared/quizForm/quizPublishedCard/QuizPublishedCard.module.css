@@ -1,0 +1,60 @@
+.QuestionPublishedCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 50%;
+  background-color: var(--color-white);
+  border-radius: var(--radius-10);
+  padding: 2rem;
+  padding-block: 4rem;
+  position: relative;
+}
+
+.greetingText {
+  width: 60%;
+  text-align: center;
+  font-size: var(--text-39);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-darkgray);
+  margin-bottom: 3rem;
+}
+
+.shareableLinkDisplay {
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius-10);
+  margin-bottom: 3rem;
+  background-color: var(--color-offWhite-1);
+  font-size: var(--text-25);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-darkgray);
+  white-space: nowrap;
+  overflow: scroll;
+}
+.shareableLinkDisplay::-webkit-scrollbar {
+  display: none;
+}
+
+.shareBtn {
+  padding: 0.4rem 1.5rem;
+  border-radius: var(--radius-10);
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-size: var(--text-21);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  width: 17rem;
+}
+
+.closeModalIcon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}

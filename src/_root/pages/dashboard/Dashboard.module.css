@@ -1,0 +1,29 @@
+.statCardWrapper {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  padding: 6rem;
+  overflow: hidden;
+}
+
+.trendingQuizzes {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 6rem;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.trendingQuizzes h2 {
+  font-size: var(--text-35);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-darkgray);
+  white-space: nowrap;
+}
+
+.quizCardWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 2.5rem;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+}

@@ -1,0 +1,72 @@
+.quizAnalysisWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.quizAnalysisWrapper h2 {
+  font-size: var(--text-50);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-blue);
+  white-space: nowrap;
+  text-align: center;
+  padding: 6rem;
+  padding-top: 4rem;
+}
+
+.table {
+  text-align: center;
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-spacing: 0;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  white-space: nowrap;
+  box-shadow: none;
+}
+.table th {
+  padding: 0.4rem 1rem;
+  background-color: var(--color-blue);
+  font-size: var(--text-16);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+}
+.table th[id="first"] {
+  border-radius: 10px 0 0 10px;
+}
+.table th[id="last"] {
+  border-radius: 0 10px 10px 0;
+}
+
+.table td {
+  padding: 0.4rem 1rem;
+  font-size: var(--text-15);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-darkgray);
+}
+
+.table td[id="last"] {
+  border-radius: 0 10px 10px 0;
+  font-size: var(--text-13);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.table td[id="first"] {
+  border-radius: 10px 0 0 10px;
+}
+
+.table tr:nth-child(even) {
+  background-color: var(--color-lightpurple-1);
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.links {
+  cursor: pointer;
+}

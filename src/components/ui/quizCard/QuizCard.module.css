@@ -1,0 +1,40 @@
+.quizCard {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-4);
+}
+
+.quizTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quizTitleWrapper p {
+  font-size: var(--text-23);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-darkgray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 60%;
+}
+
+.quizTitleWrapper .stat {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--text-15);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-orange);
+}
+
+.quizTimestamp {
+  font-size: var(--text-15);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-green);
+  white-space: nowrap;
+}

@@ -1,0 +1,10 @@
+.createQuizWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/* Question Name and Type Wrapper Styles */
+
+

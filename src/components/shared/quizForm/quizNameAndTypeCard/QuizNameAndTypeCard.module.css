@@ -1,0 +1,108 @@
+.quizNameAndTypeCardWrapper {
+  background-color: var(--color-white);
+  border-radius: var(--radius-10);
+  width: 50%;
+  padding: 5rem;
+}
+
+.quizNameWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-10);
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-25);
+}
+
+.quizNameWrapper input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: var(--text-25);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+  border-radius: var(--radius-10);
+  padding: 1.3rem;
+  background-color: transparent;
+}
+.quizNameWrapper input::placeholder {
+  color: var(--color-gray);
+  font-size: var(--text-25);
+  font-weight: var(--font-weight-medium);
+}
+
+.quizTypeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.3rem;
+  font-size: var(--text-25);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+  white-space: nowrap;
+}
+
+.quizTypeLabel {
+  flex: 0.3;
+  padding-left: 0.5rem;
+}
+
+.quizTypeOptionWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0.7;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  padding-inline: 1rem;
+  width: 100%;
+}
+
+.quizType {
+  text-align: center;
+  font-size: var(--text-20);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray);
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-25);
+  border-radius: var(--radius-10);
+  padding: 0.4rem 3rem;
+  white-space: nowrap;
+}
+
+.selectedQuizType {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.cancelAndContinueBtnWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.cancel {
+  flex: 1;
+  padding: 0.5rem 0;
+  border-radius: var(--radius-10);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: none;
+  box-shadow: var(--box-shadow-15);
+  font-size: var(--text-21);
+  font-weight: var(--font-weight-semibold);
+}
+
+.continue {
+  flex: 1;
+  padding: 0.5rem 0;
+  border-radius: var(--radius-10);
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border: none;
+  font-size: var(--text-21);
+  font-weight: var(--font-weight-semibold);
+}

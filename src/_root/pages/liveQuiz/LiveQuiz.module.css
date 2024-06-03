@@ -1,0 +1,494 @@
+.liveQuizWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-darkBlue);
+}
+
+.questionWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 78.5%;
+  height: 83.1%;
+  background-color: var(--color-white);
+  border-radius: var(--radius-15);
+  padding: 3rem;
+  padding-block: 2rem;
+  box-sizing: border-box;
+}
+.questionCountAndTimerWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.questionCount {
+  font-size: var(--text-40);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-darkgray);
+}
+
+.timer {
+  font-size: var(--text-40);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-red);
+}
+
+.question {
+  font-size: var(--text-40);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-darkgray);
+
+  width: 100%;
+}
+
+.optionsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 6rem;
+  column-gap: 8rem;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding-block: 2rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-10);
+  background-color: var(--color-offWhite-3);
+  cursor: pointer;
+  font-size: var(--text-35);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-black);
+  overflow-x: auto;
+  transition: border 0.3s ease-in-out;
+  border: 5px solid var(--color-offWhite-3);
+  max-width: 320px;
+  max-height: 112px;
+}
+
+.imageOptionsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 10rem;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.optionImage {
+  max-width: 324px;
+  max-height: 159px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-15);
+  cursor: pointer;
+  border: 5px solid transparent;
+}
+
+.textAndImageOptionsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 10rem;
+  justify-content: space-between;
+  padding: 2rem;
+
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.optionTextandImage {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: var(--color-offWhite-3);
+  border: 5px solid transparent;
+  border-radius: var(--radius-10);
+  height: 144px;
+  box-sizing: border-box;
+  width: 308px;
+}
+.text {
+  flex: 0.5;
+  flex-wrap: wrap;
+  font-size: var(--text-35);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-black);
+  white-space: warp;
+  overflow-y: auto;
+  text-wrap: wrap;
+}
+.Image {
+  flex: 0.5;
+  max-width: 136px;
+  max-height: 128px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: var(--radius-10);
+}
+.optionSelected {
+  border: 5px solid var(--color-blue);
+}
+
+.actionButtonsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.nextBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 8rem;
+  border: none;
+  border-radius: var(--radius-10);
+  background-color: var(--color-green);
+  cursor: pointer;
+  font-size: var(--text-30);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  height: 3rem;
+}
+/* Result section */
+
+.resultWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 78.5%;
+  height: 83.1%;
+  background-color: var(--color-white);
+  border-radius: var(--radius-15);
+  padding: 3rem;
+  box-sizing: border-box;
+}
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.trophy {
+  max-width: 320px;
+  max-height: 320px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contentWrapper h1 {
+  font-size: var(--text-40);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-darkgray);
+  text-align: center;
+}
+
+.contentWrapper h2 {
+  font-size: var(--text-40);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-darkgray);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.score {
+  color: var(--color-green);
+}
+
+.pollContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.pollContentWrapper h1 {
+  font-size: var(--text-74);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .textAndImageOptionsWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 4rem;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  .optionTextandImage {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: var(--color-offWhite-3);
+    border: 5px solid transparent;
+    border-radius: var(--radius-10);
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .text {
+    max-width: 50%;
+    font-size: 3vw;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-black);
+  }
+
+  .pollContentWrapper h1 {
+    font-size: var(--text-60);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+    text-align: center;
+  }
+  .optionSelected {
+    border: 5px solid var(--color-blue);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .liveQuizWrapper {
+    background-color: var(--color-white);
+  }
+
+  .questionWrapper {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--color-white);
+  }
+
+  .questionCount {
+    font-size: var(--text-25);
+  }
+  .timer {
+    font-size: var(--text-25);
+  }
+  .question {
+    text-align: center;
+    font-size: var(--text-30);
+  }
+
+  .optionsWrapper {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    place-content: cneter;
+    place-items: center;
+    column-gap: 0;
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid red; */
+  }
+  .option {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+  }
+  .imageOptionsWrapper {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    place-content: cneter;
+    column-gap: 0;
+    width: 100%;
+    padding: 0px;
+    padding-block: 1rem;
+  }
+
+  .optionImage {
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--radius-15);
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+    border: 5px solid transparent;
+    box-sizing: border-box;
+  }
+  .textAndImageOptionsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    padding-block: 1rem;
+  }
+  .optionTextandImage {
+    position: relative;
+    padding: 0px;
+    max-height: 225px;
+  }
+
+  .text {
+    position: absolute;
+    top: 0.5rem;
+    left: 1.2rem;
+    font-size: var(--text-30);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    z-index: 11;
+  }
+  .Image {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    flex: none;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: var(--radius-10);
+    padding: 0.4rem;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-radius: var(--radius-15);
+  }
+  .actionButtonsWrapper {
+    padding-bottom: 1rem;
+  }
+  .nextBtn {
+    padding: 0.5rem 8rem;
+    height: 2.5rem;
+    font-size: var(--text-20);
+  }
+
+  /* Result section */
+
+  .resultWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border-radius: var(--radius-15);
+    box-sizing: border-box;
+    padding: 0px;
+  }
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .trophy {
+    max-width: 320px;
+    max-height: 320px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .contentWrapper h1 {
+    text-align: center;
+    font-size: var(--text-40);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-darkgray);
+  }
+
+  .contentWrapper h2 {
+    font-size: var(--text-40);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-darkgray);
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  .score {
+    color: var(--color-green);
+  }
+
+  .pollContentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+
+  .pollContentWrapper h1 {
+    font-size: var(--text-45);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+    text-align: center;
+    width: 386px;
+  }
+
+  .optionSelected {
+    border: 5px solid var(--color-blue);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .optionsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: fit-content;
+  }
+  .option {
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
+    font-size: var(--text-18);
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+  .optionTextandImage {
+    padding: 0px;
+  }
+  .text {
+    font-size: var(--text-18);
+  }
+  .Image {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: var(--radius-10);
+    padding: 0.4rem;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-radius: var(--radius-15);
+  }
+  .nextBtn {
+    padding: 0.5rem 4rem;
+    height: 2.5rem;
+    font-size: var(--text-20);
+  }
+  .pollContentWrapper h1 {
+    min-width: 300px;
+
+    font-size: var(--text-34);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-black);
+    text-align: center;
+    padding-inline: 1rem;
+  }
+
+  .optionSelected {
+    border: 5px solid var(--color-blue);
+  }
+}

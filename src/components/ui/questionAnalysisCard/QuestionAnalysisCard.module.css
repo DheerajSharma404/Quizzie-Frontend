@@ -1,0 +1,57 @@
+.question {
+  font-size: var(--text-30);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  padding-bottom: 1rem;
+}
+.statsCardWrapper {
+  display: flex;
+  gap: 2.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+}
+.statsCard {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding-block: 1rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-5);
+  white-space: wrap;
+}
+
+.cardCount {
+  font-size: var(--text-30);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-darkgray);
+}
+.cardLabel {
+  font-size: var(--text-14);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-darkgray);
+  padding-inline: 1rem;
+  text-align: center;
+}
+
+.pollTypeQuestionAnalysisCardlayout {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 0.5rem;
+  padding-block: 1rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-5);
+  white-space: wrap;
+}
+
+.poll {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  padding-inline: 1rem;
+  padding-block: 1.5rem;
+  white-space: nowrap;
+}
