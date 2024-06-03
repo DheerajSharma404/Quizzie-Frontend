@@ -41,8 +41,7 @@ export const signOut = async () => {
     axios.defaults.headers.common["x-access-token"] = token;
     const requestURL = `${baseURL}/sign-out`;
     const response = await axios.post(requestURL);
-
-    if (response?.data.success) {
+    if (response?.data?.success) {
       localStorage.removeItem("x-access-token");
     }
     return response?.data;

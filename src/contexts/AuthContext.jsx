@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { validateUser } from "../api/auth.js";
+import { signOut, validateUser } from "../api/auth.js";
 
 export const AuthContext = React.createContext();
 
@@ -20,9 +20,13 @@ const AuthContextProvider = ({ children }) => {
     setUser(userData);
   };
 
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    setUser(null);
+  const handleLogout = async () => {
+    const response = await signOut();
+    if (response?.success) {
+      setIsAuthenticated(false);
+      setUser(null);
+    }
+    return response;
   };
   const fetchUser = async () => {
     const user = await validateUser();
