@@ -103,18 +103,20 @@ const QuestionForm = ({ action, quizId, quizNameAndType }) => {
     setCorrectAnswer("");
     setTimer(0);
   };
-  const handleRemoveQuestion = (id) => {
+   const handleRemoveQuestion = (id) => {
     if (action === "edit") {
       handleCurrentQuestion(id === 0 ? 0 : id - 1);
     } else {
       handleCurrentQuestion(id);
+      setFormData((prevState) => (prevState >= 0 ? prevState - 1 : 0));
     }
+
     if (formData.questions.length > 1) {
       setFormData((prevState) => {
         const updatedQuestions = prevState.questions.filter(
           (question, index) => index !== id
         );
-        setCurrentQuestion(id === 0 ? 0 : id - 1);
+
         return { ...prevState, questions: updatedQuestions };
       });
     }

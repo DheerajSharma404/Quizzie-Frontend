@@ -13,7 +13,9 @@ const LiveQuiz = () => {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [correctAnswerCount, setCorrectAnswerCount] = React.useState(0);
   const [incorrectAnswerCount, setIncorrectAnswerCount] = React.useState(0);
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(
+    quiz?.questions[currentQuestion]?.timer
+  );
   const [showResult, setShowResult] = React.useState(false);
 
   const updateQuizCounts = (isCorrect) => {
@@ -91,11 +93,15 @@ const LiveQuiz = () => {
 
   React.useEffect(() => {
     let timer;
-    if (count > 0 && quiz?.questions[currentQuestion]?.timer) {
+    if (count > 0 && quiz?.questions[currentQuestion]?.timer > 0) {
       timer = setInterval(() => {
         setCount((prevCount) => prevCount - 1);
       }, 1000);
-    } else if (count === 0 && !showResult) {
+    } else if (
+      count === 0 &&
+      !showResult &&
+      quiz?.questions[currentQuestion]?.timer
+    ) {
       handleClick();
     }
     return () => clearInterval(timer);
@@ -109,9 +115,9 @@ const LiveQuiz = () => {
       quiz.questions[currentQuestion]?.timer && // Check if timer property exists
       count === 0
     ) {
-      setCount(quiz.questions[currentQuestion].timer || 0);
+      setCount(quiz.questions[currentQuestion].timer);
     }
-  }, [quiz, currentQuestion]);
+  }, [quiz, currentQuestion, count]);
 
   React.useEffect(() => {
     const fetchQuiz = async () => {
@@ -133,11 +139,11 @@ const LiveQuiz = () => {
             <div className={styles.questionCount}>{`0${currentQuestion + 1}/0${
               quiz?.questions.length
             }`}</div>
-            {quiz?.questions[currentQuestion].timer && (
+            {quiz?.questions[currentQuestion]?.timer ? (
               <div className={styles.timer}>
                 {count <= 9 ? `00 : 0${count}s` : `00 : ${count}s`}
               </div>
-            )}
+            ) : null}
           </div>
           <div className={styles.question}>
             {quiz?.questions[currentQuestion]?.question}
